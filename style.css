@@ -12,6 +12,7 @@ body {
 .navigazione {
     height: 90vh;
     width: 30%;
+    padding: 24px 48px 24px 24px;
 }
 
 h1 {
@@ -39,19 +40,15 @@ h3 {
 }
 
 .container-site {
-    margin: 32px 48px;
-}
-
-.navigazione {
-    padding-right: 70px;
+    margin: 40px 48px;
 }
 
 .freccie {
-    width: 35px;
+    width: 50px;
     display: inline-flex;
     justify-content: space-between;
-    margin: 0 10px 10px 10px;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 .dx {
@@ -95,6 +92,22 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 24px;
+    transition-duration: 0.5s;
+}
+
+.bottone-off:hover {
+    color: #FFFDF5;
+    background-color: #333333;
+}
+
+.bottone-on:hover {
+    color: #FFFDF5;
+    background-color: #333333;
+}
+
+.st0 {
+    fill: #333333;
+    transition-duration: 0.5s;
 }
 
 .freccie-bottoni {
@@ -108,6 +121,52 @@ h3 {
 }
 
 .logo-hdm {
+    margin-top: 32px;
     width: 100px;
-    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sx:hover {
+    transform: translate(-10px, 0);
+}
+
+.dx:hover {
+    transform: translate(10px, 0);
+}
+
+.dx,
+.sx {
+    transition-duration: 0.5s;
+}
+
+@media (max-width: 1500px) {
+    .logo {
+        display: block;
+    }
+}
+
+@media (max-width: 1280px) {
+    .row {
+        display: block;
+    }
+    .dashboard {
+        height: 100vh;
+        width: 100%;
+        margin-bottom: 72px;
+    }
+    .navigazione {
+        height: 100%;
+        width: 100%;
+        padding: 24px;
+    }
+    .logo-hdm {
+        visibility: hidden;
+        display: none;
+    }
+    .freccie {
+        display: none;
+    }
 }
