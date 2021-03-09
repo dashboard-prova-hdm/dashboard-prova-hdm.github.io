@@ -5,12 +5,10 @@ body {
 }
 
 .dashboard {
-    height: 90vh;
     width: 70%;
 }
 
 .navigazione {
-    height: 90vh;
     width: 30%;
     padding: 0px 48px 24px 24px;
 }
@@ -177,7 +175,7 @@ a {
         padding: 0;
     }
     .navigazione {
-        height: 100%;
+        height: auto;
         width: 100%;
         padding: 0px 12px 12px 12px;
     }
