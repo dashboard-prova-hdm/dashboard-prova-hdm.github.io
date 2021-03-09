@@ -30,9 +30,10 @@ h2 {
 
 h3 {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.5px;
     font-weight: 100;
+    line-height: 1.3;
 }
 
 .logo {
@@ -110,6 +111,10 @@ h3 {
     transition-duration: 0.5s;
 }
 
+.testo-bottoni {
+    width: 90%;
+}
+
 .freccie-bottoni {
     width: 12px;
     margin-top: -5px;
@@ -117,11 +122,18 @@ h3 {
 
 .legenda {
     width: 100%;
-    display: inline;
+    padding-top: 16px;
 }
 
-.logo-hdm {
-    margin-top: 32px;
+.logo-hdm-mobile {
+    margin: 16px 12px 0 12px;
+    padding-bottom: 24px;
+    width: 100px;
+    visibility: hidden;
+}
+
+.logo-hdm-desk {
+    margin-top: 36px;
     width: 100px;
 }
 
@@ -148,25 +160,36 @@ a {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1000px) {
+    .logo-hdm-mobile {
+        visibility: visible;
+        display: block;
+    }
     .row {
         display: block;
     }
     .dashboard {
-        height: 100vh;
+        height: 100px;
         width: 100%;
         margin-bottom: 72px;
+    }
+    .col- {
+        padding: 0;
     }
     .navigazione {
         height: 100%;
         width: 100%;
-        padding: 6px;
+        padding: 0px 12px 12px 12px;
     }
-    .logo-hdm {
+    .logo-hdm-desk {
         visibility: hidden;
         display: none;
     }
     .freccie {
-        display: none;
+        padding-top: 32px;
+        padding-bottom: 24px;
+    }
+    .container-site {
+        margin: 24px;
     }
 }
