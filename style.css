@@ -6,13 +6,11 @@ body {
 
 .dashboard {
     width: 70%;
-    height: 90vh;
 }
 
 .navigazione {
     width: 30%;
     padding: 0px 48px 24px 24px;
-    height: 90vh;
 }
 
 h1 {
@@ -41,7 +39,8 @@ h3 {
 }
 
 .container-site {
-    margin: 40px 48px;
+    padding: 40px 48px;
+    height: 100vh;
 }
 
 .freccie {
@@ -136,6 +135,7 @@ h3 {
 .logo-hdm-desk {
     margin-top: 36px;
     width: 100px;
+    margin-bottom: 36px;
 }
 
 a {
