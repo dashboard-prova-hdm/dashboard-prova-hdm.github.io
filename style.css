@@ -4,6 +4,10 @@ body {
     background-color: #FFFDF5;
 }
 
+.prova {
+    display: inline-flex;
+}
+
 .dashboard {
     width: 70%;
     height: 100%;
@@ -42,8 +46,11 @@ h3 {
 }
 
 .container-site {
-    padding: 40px 48px 40px 48px;
-    height: 100%;
+    height: 100vh;
+}
+
+.container-site-small {
+    padding: 40px 48px 16px 48px;
 }
 
 .freccie {
@@ -132,19 +139,27 @@ h3 {
     display: none;
 }
 
-.logo-hdm-mobile {
-    padding-bottom: 24px;
-    width: 170px;
+.margin-right {
+    margin-right: 48px;
 }
 
-.logo-hdm-desk {
-    margin-top: 36px;
-    width: 170px;
-    margin-bottom: 36px;
+.margin-top {
+    margin-top: 10px;
+}
+
+.logo-hdm {
+    width: 150px;
+}
+
+.footer-hdm {
+    background-color: #333;
+    width: 100%;
+    padding: 24px 48px 20px 48px;
 }
 
 .credits {
     margin-top: 36px;
+    color: #FFFDF5;
 }
 
 a {
@@ -171,8 +186,27 @@ a {
     transition-duration: 0.5s;
 }
 
+.sito-hdm {
+    color: #FFFDF5;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+
+.sito-hdm {
+    color: #FFFDF5;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+
+.sito-hdm:hover {
+    color: #FFFDF5;
+    opacity: 0.6;
+}
+
 .fonti:hover {
-    color: #333333;
+    color: #333;
     opacity: 0.6;
 }
 
@@ -183,11 +217,6 @@ a {
 }
 
 @media (max-width: 1000px) {
-    .credits-mobile {
-        visibility: visible;
-        display: block;
-        padding: 24px 12px;
-    }
     .row {
         display: block;
     }
@@ -203,18 +232,18 @@ a {
         width: 100%;
         padding: 0px 12px 12px 12px;
     }
-    .credits-desk {
-        visibility: hidden;
-        display: none;
-    }
     .freccie {
         padding-top: 32px;
         padding-bottom: 24px;
     }
-    .container-site {
+    .container-site-small {
         padding: 24px;
     }
     .legenda {
         margin-bottom: 36px;
+    }
+    .footer-hdm {
+        display: none;
+        visibility: hidden;
     }
 }
