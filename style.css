@@ -6,11 +6,14 @@ body {
 
 .dashboard {
     width: 70%;
+    height: 100%;
+    margin-top: -16px;
 }
 
 .navigazione {
     width: 30%;
-    padding: 0px 48px 24px 24px;
+    padding: 0px 48px 0px 24px;
+    height: 100%;
 }
 
 h1 {
@@ -39,7 +42,8 @@ h3 {
 }
 
 .container-site {
-    padding: 40px 48px;
+    padding: 40px 48px 40px 48px;
+    height: 100%;
 }
 
 .freccie {
@@ -120,21 +124,27 @@ h3 {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 12px;
     letter-spacing: 0.5px;
-    font-weight: 100;
     line-height: 1.5;
 }
 
-.logo-hdm-mobile {
-    margin: 16px 12px 0 12px;
-    padding-bottom: 24px;
-    width: 100px;
+.credits-mobile {
     visibility: hidden;
+    display: none;
+}
+
+.logo-hdm-mobile {
+    padding-bottom: 24px;
+    width: 170px;
 }
 
 .logo-hdm-desk {
     margin-top: 36px;
-    width: 100px;
+    width: 170px;
     margin-bottom: 36px;
+}
+
+.credits {
+    margin-top: 36px;
 }
 
 a {
@@ -173,9 +183,10 @@ a {
 }
 
 @media (max-width: 1000px) {
-    .logo-hdm-mobile {
+    .credits-mobile {
         visibility: visible;
         display: block;
+        padding: 24px 12px;
     }
     .row {
         display: block;
@@ -183,7 +194,6 @@ a {
     .dashboard {
         height: 100px;
         width: 100%;
-        margin-bottom: 72px;
     }
     .col- {
         padding: 0;
@@ -193,7 +203,7 @@ a {
         width: 100%;
         padding: 0px 12px 12px 12px;
     }
-    .logo-hdm-desk {
+    .credits-desk {
         visibility: hidden;
         display: none;
     }
@@ -203,5 +213,8 @@ a {
     }
     .container-site {
         padding: 24px;
+    }
+    .legenda {
+        margin-bottom: 36px;
     }
 }

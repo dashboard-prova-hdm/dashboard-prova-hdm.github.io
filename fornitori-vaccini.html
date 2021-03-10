@@ -79,8 +79,13 @@
                             <span style="color:#FFFDF5; background-color:#F47D70; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">ASTRAZENECA</span> e <span style="color:#FFFDF5; background-color:#A59ED9; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">MODERNA</span></h3>
                     </div>
 
-                    <div class="logo-hdm logo-hdm-desk">
-                        <img src="./assets/Logo_HDM.svg" alt="Logo">
+                    <div class="credits-desk">
+                        <div class="logo-hdm logo-hdm-desk">
+                            <img src="./assets/Logo_HDM.svg" alt="Logo">
+                        </div>
+
+                        <h3><span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br>
+                            <span style="font-weight: bold;">DataViz Designers:</span> Annalaura Cannavò, Alessia Musio</h3>
                     </div>
             </div>
 
@@ -91,12 +96,12 @@
                 <script type='text/javascript'>
                     var divElement = document.getElementById('viz1615221012025');
                     var vizElement = divElement.getElementsByTagName('object')[0];
-                    if (divElement.offsetWidth > 800) {
+                    if (divElement.offsetWidth > 1000) {
                         vizElement.style.width = '100%';
-                        vizElement.style.height = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
                     } else if (divElement.offsetWidth > 500) {
                         vizElement.style.width = '100%';
-                        vizElement.style.height = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.95) + 'px';
                     } else {
                         vizElement.style.width = '100%';
                         vizElement.style.minHeight = '1790px';
@@ -107,8 +112,13 @@
                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
                 </script>
 
-                <div class="logo-hdm logo-hdm-mobile">
-                    <img src="./assets/Logo_HDM.svg" alt="Logo">
+                <div class="credits-mobile">
+                    <div class="logo-hdm logo-hdm-mobile">
+                        <img src="./assets/Logo_HDM.svg" alt="Logo">
+                    </div>
+
+                    <h3><span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br>
+                        <span style="font-weight: bold;">DataViz Designers:</span> Annalaura Cannavò, Alessia Musio</h3>
                 </div>
 
             </div>

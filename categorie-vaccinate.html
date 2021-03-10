@@ -59,7 +59,7 @@
                         </div>
                     </a>
                     <div class="panel">
-                        <h3>La rappresentazioni mostrano i volumi di somministrazione (prima e seconda dose) per sesso, fascia d’età e categorie, come previsto dal Piano vaccinazione anti Covid-19. </div>
+                        <h3>La rappresentazione mostrano i volumi di somministrazione (prima e seconda dose) per sesso, fascia d’età e categorie, come previsto dal Piano vaccinazione anti Covid-19. </div>
 
                     <a class="bottone-off bottone-3" href="./vaccinazioni-per-regione.html">
                         <div class="testo-bottoni">
@@ -74,12 +74,17 @@
                     </a>
 
                     <div class="legenda">
-                        Il colore indica il totale dei vaccini somministrati a
+                        <h2>• LEGENDA:</h2> Il colore indica il totale dei vaccini somministrati a
                         <span style="color:#FFFDF5; background-color:#EF9997; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">DONNE</span> e <span style="color:#FFFDF5; background-color:#626c8f; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">UOMINI</span>
                     </div>
 
-                    <div class="logo-hdm logo-hdm-desk">
-                        <img src="./assets/Logo_HDM.svg" alt="Logo">
+                    <div class="credits-desk">
+                        <div class="logo-hdm logo-hdm-desk">
+                            <img src="./assets/Logo_HDM.svg" alt="Logo">
+                        </div>
+
+                        <h3><span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br>
+                            <span style="font-weight: bold;">DataViz Designers:</span> Annalaura Cannavò, Alessia Musio</h3>
                     </div>
             </div>
 
@@ -91,15 +96,15 @@
                 <script type='text/javascript'>
                     var divElement = document.getElementById('viz1615220842348');
                     var vizElement = divElement.getElementsByTagName('object')[0];
-                    if (divElement.offsetWidth > 800) {
+                    if (divElement.offsetWidth > 1000) {
                         vizElement.style.width = '100%';
-                        vizElement.style.height = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
                     } else if (divElement.offsetWidth > 500) {
                         vizElement.style.width = '100%';
-                        vizElement.style.height = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.95) + 'px';
                     } else {
                         vizElement.style.width = '100%';
-                        vizElement.style.minHeight = '1490px';
+                        vizElement.style.minHeight = '1690px';
                         vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px';
                     }
                     var scriptElement = document.createElement('script');
@@ -107,10 +112,14 @@
                     vizElement.parentNode.insertBefore(scriptElement, vizElement);
                 </script>
 
-                <div class="logo-hdm logo-hdm-mobile">
-                    <img src="./assets/Logo_HDM.svg" alt="Logo">
-                </div>
+                <div class="credits-mobile">
+                    <div class="logo-hdm logo-hdm-mobile">
+                        <img src="./assets/Logo_HDM.svg" alt="Logo">
+                    </div>
 
+                    <h3><span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br>
+                        <span style="font-weight: bold;">DataViz Designers:</span> Annalaura Cannavò, Alessia Musio</h3>
+                </div>
             </div>
         </div>
     </div>
