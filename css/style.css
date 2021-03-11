@@ -81,7 +81,7 @@ body {
 }
 
 .row {
-    margin: 40px 48px 100px 48px;
+    margin: 40px 48px 48px 48px;
 }
 
 .dashboard {
@@ -176,8 +176,6 @@ body {
 /*FOOTER*/
 
 .footer {
-    position: fixed;
-    bottom: 0;
     color: #F5F4F4;
     background-color: #333;
     display: inline-flex;
@@ -228,8 +226,6 @@ body {
         margin-bottom: 48px;
     }
     .footer {
-        position: relative;
-        bottom: 0;
         color: #F5F4F4;
         background-color: #333;
         display: block;
