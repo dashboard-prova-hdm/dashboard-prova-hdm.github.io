@@ -1,0 +1,247 @@
+/*LOADING*/
+
+@keyframes loading {
+    0% {
+        max-height: 0;
+    }
+}
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background-color: #F5F4F4;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.loading-logo {
+    width: 50px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    position: fixed;
+    animation: pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.1);
+    }
+    66% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+/*FONTS*/
+
+.titolo {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.sottotitolo {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.corpo {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 100;
+    line-height: 1.4;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/*GENERAL*/
+
+body {
+    color: #333333;
+    text-align: left;
+    background-color: #F5F4F4;
+}
+
+.row {
+    margin: 40px 48px;
+}
+
+.dashboard {
+    width: 70%;
+    margin-top: -16px;
+}
+
+.navigazione {
+    width: 30%;
+    padding-right: 40px;
+}
+
+
+/*NAVIGAZIONE*/
+
+.logo {
+    display: flex;
+}
+
+@media (max-width: 1500px) {
+    .logo {
+        display: block;
+    }
+}
+
+.fonti {
+    color: #333333;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+}
+
+.fonti:hover {
+    color: #333333;
+    opacity: 0.6;
+}
+
+.bottone-on {
+    color: #F5F4F4;
+    background-color: #333;
+    font-weight: bold;
+    border-radius: 30px 30px 0 0;
+    padding: 18px 24px 18px 24px;
+    cursor: pointer;
+    box-shadow: 0px 3px 15px rgba(51, 51, 51, 0.15);
+    display: flex;
+}
+
+.descrizione {
+    color: #333333;
+    background-color: #F5F4F4;
+    border-radius: 0 0 30px 30px;
+    padding: 18px 24px 18px 24px;
+    box-shadow: 0px 3px 15px rgba(51, 51, 51, 0.15);
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.bottone-off {
+    color: #333333;
+    background-color: #F5F4F4;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 18px 24px 18px 24px;
+    box-shadow: 0px 3px 15px rgba(51, 51, 51, 0.15);
+    display: flex;
+    margin-bottom: 24px;
+    transition-duration: 0.5s;
+}
+
+.bottone-off:hover {
+    color: #F5F4F4;
+    background-color: #333333;
+    text-decoration: none;
+}
+
+.bottone-on:hover {
+    color: #F5F4F4;
+    text-decoration: none;
+}
+
+.legenda {
+    width: 100%;
+    padding-top: 16px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+
+/*FOOTER*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    color: #F5F4F4;
+    background-color: #333;
+    display: inline-flex;
+    width: 100%;
+    padding: 16px 48px;
+}
+
+.logo-hdm {
+    width: 140px;
+    height: auto;
+    margin-right: 64px;
+}
+
+.sito-hdm {
+    color: #F5F4F4;
+    font-weight: bold;
+    text-decoration: underline;
+    transition-duration: 0.5s;
+    margin-top: 8px;
+}
+
+.sito-hdm:hover {
+    color: #F5F4F4;
+    opacity: 0.6;
+}
+
+.credits {
+    margin-top: 8px;
+    margin-left: 64px;
+}
+
+@media (max-width: 1000px) {
+    .row {
+        display: block;
+        margin: 12px;
+    }
+    .col- {
+        padding: 0;
+    }
+    .navigazione {
+        width: 100%;
+        padding: 0px 12px 12px 12px;
+    }
+    .dashboard {
+        width: 100%;
+    }
+    .legenda {
+        margin-bottom: 48px;
+    }
+    .footer {
+        position: relative;
+        bottom: 0;
+        color: #F5F4F4;
+        background-color: #333;
+        display: block;
+        width: 100%;
+        padding: 24px;
+    }
+    .logo-hdm {
+        width: 200px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .credits {
+        margin-left: 0;
+    }
+}

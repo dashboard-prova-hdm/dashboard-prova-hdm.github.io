@@ -1,25 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="Vaccini Real Time">
+    <meta property="og:description" content="Dasboard che monitora l'andamento della campagna vaccinale in Italia." />
+    <meta property="og:image" content="https://dashboard-prova-hdm.github.io/cover.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vaccini Real Time">
+    <meta name="twitter:description" content="description" content="Dasboard che monitora l'andamento della campagna vaccinale in Italia.">
+    <meta name="twitter:image" content="https://dashboard-prova-hdm.github.io/cover.jpg">
+
+    <meta name="description" content="Dasboard che monitora l'andamento della campagna vaccinale in Italia." />
+    <meta name="keywords" content="data visualization, dataviz, data, data science, vaccini, vaccini covid, vaccini fonti ufficiali, vaccini ministero, dashboard vaccini, coronavirus, covid, covid-19, campagna vaccinale" />
+    <meta name="author" content="H-Farm Digital Marketing, H-Farm, Alessia Musio, Annalaura Cannavò, Giuseppe Iovino, Nicolò Marana">
+    <meta name="copyright" content="H-Farm Digital Marketing, H-Farm, Alessia Musio, Annalaura Cannavò, Giuseppe Iovino, Nicolò Marana" />
     <link rel="icon" href="./favicon.png" type="image/png" />
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    <link rel="stylesheet" href="./loading.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="./js/main.js"></script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
     <title>Vaccini Real Time</title>
 </head>
 
 <body>
+
+    <!-- Loading -->
     <script>
         $('html').css('overflow', 'hidden');
         $('body').append('<div id="loading"><div class="loading-logo"><img src="./assets/Logo_HDM_asterisco.svg" alt="HDM Logo"></div></div>');
@@ -35,105 +56,89 @@
         }
     </script>
 
-    <div class="container-site">
 
-        <div class="container-site-small">
-            <div class="row no-gutters">
-                <div class="col- navigazione">
-                    <div class="logo">
-                        <h1>Vaccini Covid-19&nbsp;</h1>
-                        <h2>REAL TIME</h2>
-                    </div>
-                    <h3><br> Questa dashboard mostra l’andamento della campagna vaccinale in Italia, monitorando le vaccinazioni giornaliere, le categorie interessate, l’andamento a livello regionale e la tipologia di vaccini somministrati.<br>
-                        <br><a class="fonti" href="https://github.com/italia/covid19-opendata-vaccini" target="blank">Consulta le fonti ufficiali →</a><br><br><br>
-                        <h2>• SELEZIONA L'ARGOMENTO CHE VUOI APPROFONDIRE:</h2>
-                        <br>
+    <!-- Site -->
+    <div class="row">
+        <div class="col- navigazione">
+            <div class="logo titolo">Vaccini Covid-19&nbsp;
+                <div class="sottotitolo">REAL TIME</div>
+            </div>
 
-                        <a class="bottone-off bottone-1" href="./index.html">
-                            <div class="testo-bottoni">
-                                <h3>Quanti vaccini vengono fatti al giorno?</h3>
-                            </div>
-                        </a>
+            <div class="corpo">
+                <br> Questa dashboard mostra l’andamento della campagna vaccinale in Italia, monitorando le vaccinazioni giornaliere, le categorie interessate, l’andamento a livello regionale e la tipologia di vaccini somministrati.<br>
+                <br><a class="fonti corpo bold" href="https://github.com/italia/covid19-opendata-vaccini" target="blank">Consulta le fonti ufficiali →</a><br><br><br>
+                <div class="sottotitolo">• SELEZIONA L'ARGOMENTO CHE VUOI APPROFONDIRE:</div>
+                <br>
 
-                        <a class="bottone-on" href="./categorie-vaccinate.html">
-                            <div class="testo-bottoni">
-                                <h3>Quali categorie di persone sono già state vaccinate?</h3>
-                            </div>
-                        </a>
-                        <div class="panel">
-                            <h3>La rappresentazione mostrano i volumi di somministrazione (prima e seconda dose) per sesso, fascia d’età e categorie, come previsto dal Piano vaccinazione anti Covid-19. </div>
+                <a class="bottone-off corpo bold" href="./index.html">
+                        Quanti vaccini vengono fatti al giorno?
+                    </a>
 
-                        <a class="bottone-off bottone-3" href="./vaccinazioni-per-regione.html">
-                            <div class="testo-bottoni">
-                                <h3>Quante persone sono state vaccinate in ogni regione?</h3>
-                            </div>
-                        </a>
+                <a class="bottone-on corpo bold" href="./categorie-vaccinate.html">
+                        Quali categorie di persone sono già state vaccinate?
+                    </a>
+                <div class="descrizione corpo">
+                    La rappresentazione mostrano i volumi di somministrazione (prima e seconda dose) per sesso, fascia d’età e categorie, come previsto dal Piano vaccinazione anti Covid-19.</div>
 
-                        <a class="bottone-off bottone-4" href="./fornitori-vaccini.html">
-                            <div class="testo-bottoni">
-                                <h3>Quali sono i fornitori di vaccini?</h3>
-                            </div>
-                        </a>
+                <a class="bottone-off corpo bold" href="./vaccinazioni-per-regione.html">
+                        Quante persone sono state vaccinate in ogni regione?
+                    </a>
 
-                        <div class="legenda">
-                            <h2>• LEGENDA:</h2> Il colore indica il totale dei vaccini somministrati a
-                            <span style="color:#FFFDF5; background-color:#EF9997; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">DONNE</span> e <span style="color:#FFFDF5; background-color:#626c8f; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">UOMINI</span>
-                        </div>
-                </div>
+                <a class="bottone-off corpo bold" href="./fornitori-vaccini.html">
+                        Quali sono i fornitori di vaccini?
+                    </a>
 
-
-
-                <div class="col- dashboard">
-
-                    <div class='tableauPlaceholder' id='viz1615220842348' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16151974072070&#47;Categorie&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Vaccini_16151974072070&#47;Categorie' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16151974072070&#47;Categorie&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it' /></object></div>
-                    <script type='text/javascript'>
-                        var divElement = document.getElementById('viz1615220842348');
-                        var vizElement = divElement.getElementsByTagName('object')[0];
-                        if (divElement.offsetWidth > 1000) {
-                            vizElement.style.width = '100%';
-                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                        } else if (divElement.offsetWidth > 500) {
-                            vizElement.style.width = '100%';
-                            vizElement.style.height = (divElement.offsetWidth * 0.95) + 'px';
-                        } else {
-                            vizElement.style.width = '100%';
-                            vizElement.style.minHeight = '1690px';
-                            vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px';
-                        }
-                        var scriptElement = document.createElement('script');
-                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                    </script>
-
+                <div class="legenda">
+                    <div class="sottotitolo">• LEGENDA:</div>
+                    <div class="corpo"></div>Il colore indica la somministazione della
+                    <span style="color:#FFFDF5; background-color:#F8A984; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">PRIMA</span> e della
+                    <span style="color:#FFFDF5; background-color:#8B9BBF; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">SECONDA</span> dose di vaccino.
                 </div>
             </div>
         </div>
 
-        <div class="footer-hdm credits">
-            <div class="prova">
-                <div class="logo-hdm margin-right">
-                    <img src="./assets/Logo_HDM.svg" alt="Logo">
-                </div>
-
-                <div class="sito-hdm margin-right margin-top">
-                    <a class="sito-hdm" href="https://www.h-dm.it/it/" target="blank">
-                        <h3>Visita il nostro sito →</h3>
-                    </a>
-                </div>
-
-                <div class="nomi margin-right margin-top">
-                    <h3><span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br></h3>
-                </div>
-
-                <div class="nomi margin-right margin-top">
-                    <h3><span style="font-weight: bold;">DataViz Designers:</span> Annalaura Cannavò, Alessia Musio</h3>
-                </div>
-
-
-            </div>
+        <div class="col- dashboard">
+            <div class='tableauPlaceholder' id='viz1615220842348' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16151974072070&#47;Categorie&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Vaccini_16151974072070&#47;Categorie' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16151974072070&#47;Categorie&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it' /></object></div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1615220842348');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 1000) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                } else if (divElement.offsetWidth > 500) {
+                    vizElement.style.width = '100%';
+                    vizElement.style.height = (divElement.offsetWidth * 0.95) + 'px';
+                } else {
+                    vizElement.style.width = '100%';
+                    vizElement.style.minHeight = '1690px';
+                    vizElement.style.maxHeight = (divElement.offsetWidth * 1.77) + 'px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
         </div>
     </div>
 
+    <div class="footer">
+        <div class="logo-hdm">
+            <a class="logo-hdm" href="https://www.h-dm.it/it/" target="blank">
+                <img src="./assets/Logo_HDM.svg" alt="Logo">
+            </a>
+        </div>
+
+        <a class="sito-hdm corpo bold" href="https://www.h-dm.it/it/" target="blank">
+              Visita il nostro sito →
+            </a>
+
+        <div class="credits corpo">
+            <span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana
+        </div>
+
+        <div class="credits corpo">
+            <span style="font-weight: bold;">Data Visualization Designers:</span> Annalaura Cannavò, Alessia Musio
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
