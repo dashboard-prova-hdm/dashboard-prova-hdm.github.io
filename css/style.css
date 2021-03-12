@@ -80,6 +80,23 @@ body {
     background-color: #F5F4F4;
 }
 
+.row {
+    margin: 100px 48px 40px 48px;
+}
+
+.dashboard {
+    width: 70%;
+    margin-top: -16px;
+}
+
+.navigazione {
+    width: 30%;
+    padding-right: 40px;
+}
+
+
+/*HEADER*/
+
 .header {
     position: fixed;
     top: 0;
@@ -96,6 +113,7 @@ body {
     width: 90px;
     height: 24px;
     cursor: pointer;
+    display: inline-flex;
 }
 
 .icon {
@@ -104,18 +122,12 @@ body {
     cursor: pointer;
 }
 
-.row {
-    margin: 100px 48px 40px 48px;
-}
-
-.dashboard {
-    width: 70%;
-    margin-top: -16px;
-}
-
-.navigazione {
-    width: 30%;
-    padding-right: 40px;
+.it {
+    font-weight: 700;
+    color: #b3b3b3;
+    font-size: 12px;
+    padding: .3em 0 0 .3rem;
+    text-transform: uppercase;
 }
 
 
@@ -219,7 +231,7 @@ body {
     font-weight: bold;
     text-decoration: underline;
     transition-duration: 0.5s;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
 .sito-hdm:hover {
@@ -229,8 +241,15 @@ body {
 
 .credits {
     margin-left: 64px;
-    margin-top: 6px;
+    margin-top: 4px;
 }
+
+.logo-sito {
+    display: inline-flex;
+}
+
+
+/*MOBILE*/
 
 @media (max-width: 1000px) {
     .row {
@@ -257,14 +276,20 @@ body {
         display: block;
         width: 100%;
         padding: 24px;
+        margin-top: 40px;
     }
     .logo-hdm {
-        width: 200px;
-        margin-right: 0;
-        margin-bottom: 8px;
+        width: 180px;
+        margin-right: 24px;
+        margin-bottom: 24px;
     }
     .credits {
         margin-left: 0;
         margin-bottom: 8px;
+        margin-top: -4px;
+    }
+    .icon {
+        height: 22px;
+        margin-left: 4px;
     }
 }
