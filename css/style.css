@@ -261,7 +261,7 @@ body {
     }
     .navigazione {
         width: 100%;
-        padding: 72px 12px 12px 12px;
+        padding: 72px 12px 36px 12px;
     }
     .dashboard {
         width: 100%;
@@ -293,7 +293,7 @@ body {
         margin-left: 0px;
     }
     .logo-wired {
-        width: 80px;
+        width: 70px;
         height: auto;
     }
 }
