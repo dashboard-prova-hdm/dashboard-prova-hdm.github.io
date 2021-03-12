@@ -87,7 +87,7 @@ body {
 
 .dashboard {
     width: 70%;
-    margin-top: -16px;
+    margin-top: -8px;
 }
 
 .navigazione {
@@ -135,12 +135,6 @@ body {
 
 .logo {
     display: flex;
-}
-
-@media (max-width: 1500px) {
-    .logo {
-        display: block;
-    }
 }
 
 .fonti {
@@ -250,6 +244,24 @@ body {
 
 
 /*MOBILE*/
+
+@media (max-width: 1500px) {
+    .logo {
+        display: block;
+    }
+    .corpo {
+        font-size: 11px;
+    }
+    .titolo {
+        font-size: 26px;
+    }
+    .dashboard {
+        width: 75%;
+    }
+    .navigazione {
+        width: 25%;
+    }
+}
 
 @media (max-width: 1000px) {
     .row {
