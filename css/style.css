@@ -114,6 +114,7 @@ body {
     width: 90px;
     cursor: pointer;
     display: inline-flex;
+    text-decoration: none!important;
 }
 
 .icon {
@@ -133,6 +134,12 @@ body {
     font-size: 12px;
     padding: .3em 0 0 .3rem;
     text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo-wired:hover {
+    color: #b3b3b3!important;
+    text-decoration: none!important;
 }
 
 
