@@ -108,18 +108,18 @@
                                 var divElement = document.getElementById('viz1615805549070');
                                 var vizElement = divElement.getElementsByTagName('object')[0];
                                 if (divElement.offsetWidth > 800) {
-                                    vizElement.style.minWidth = '650px';
+                                    vizElement.style.minWidth = '450px';
                                     vizElement.style.maxWidth = '100%';
-                                    vizElement.style.minHeight = '823px';
+                                    vizElement.style.minHeight = '650px';
                                     vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
                                 } else if (divElement.offsetWidth > 500) {
-                                    vizElement.style.minWidth = '650px';
+                                    vizElement.style.minWidth = '450px';
                                     vizElement.style.maxWidth = '100%';
-                                    vizElement.style.minHeight = '823px';
+                                    vizElement.style.minHeight = '650px';
                                     vizElement.style.maxHeight = (divElement.offsetWidth * 0.75) + 'px';
                                 } else {
                                     vizElement.style.width = '100%';
-                                    vizElement.style.height = '823px';
+                                    vizElement.style.height = '540px';
                                 }
                                 var scriptElement = document.createElement('script');
                                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
