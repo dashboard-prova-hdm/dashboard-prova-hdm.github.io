@@ -2,8 +2,162 @@
 <html lang="it">
 
 <head>
+    <!-- OneTrust Cookies Consent Notice start -->
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="2d60e7d5-2a98-42f8-8f63-b68b8ff4b575"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.cookielaw.org/opt-out/otCCPAiab.js" ccpa-opt-out-ids="C0002, C0003, C0004, C0005" ccpa-opt-out-lspa=false ccpa-opt-out-geo="ca"></script>
+    <!-- OneTrust Cookies Consent Notice end -->
+    <script>
+        /* setting global vars CMP */
+        var oneTrustLoaded = false;
+        var numberOfCallOptanWrapper = 0;
+        var permutiveToken = 'NO_CONSENT_ID_SET';
+        var cmpEnabled = false;
+        var cmpCookieSetting = {
+            basic: null,
+            performance: null,
+            functional: null,
+            targeting: null,
+            social: null
+        };
+        var cookieType = {
+            basic: "1:1",
+            performance: "2:1",
+            functional: "3:1",
+            targeting: "4:1",
+            social: "5:1"
+        };
 
-    <div id="CookieLaw" style="display:none;"></div>
+        function getCmpSettingType(cookieTypeName) {
+            var response = null;
+            var _checkValue = new RegExp("^OptanonConsent=.*groups=[^=]*" + escape(cookieType[cookieTypeName]));
+            try {
+                response = document.cookie.split(";").find((function(_value) {
+                    return _checkValue.test(_value.trim());
+                }));
+            } catch (e) {}
+            return response;
+        }
+
+        function getCmpSetting() {
+            for (var key in cookieType) {
+                var value = cookieType[key];
+                cmpCookieSetting[key] = !!getCmpSettingType(key);
+            }
+            console.log(cmpCookieSetting);
+        }
+
+        function init() {
+            console.log("init: check OT configuration");
+            getCmpSetting();
+            cmpDataLayer();
+            var gdprApplied = false;
+            if (!gdprApplied && shouldApplyGDPR()) {
+                gdprApplied = true;
+            }
+
+            function shouldApplyGDPR() {
+                var gdprApplies = false;
+                var cmp = window.__cmp;
+                var tcfapi = window.__tcfapi;
+                if (cmp) {
+                    cmp('ping', {}, function(e) {
+                        if (e.cmpLoaded) {
+                            cmp('getConsentData', {}, function(e) {
+                                if (e.gdprApplies) {
+                                    gdprApplies = true;
+                                }
+                            });
+                        }
+                    });
+                }
+                if (tcfapi) {
+                    tcfapi('ping', 2, function(e) {
+                        if (e.gdprApplies) {
+                            gdprApplies = true;
+                        }
+                    });
+                }
+                return gdprApplies;
+            }
+
+            function getPrivacyString() {
+                return getCookie('usprivacy') || '1---';
+            }
+
+            function getCookie(name, docCookies) {
+                docCookies = docCookies || document.cookie;
+                var cookies = docCookies.split(';');
+                var matchRegex = RegExp('^\\s*' + name + '=\\s*(.*?)\\s*$');
+                for (var i = 0; i < cookies.length; i++) {
+                    var matched = cookies[i].match(matchRegex);
+                    if (matched) {
+                        return matched[1];
+                    }
+                }
+            }
+        }
+
+        function cmpDataLayer() {
+            window.dataLayer = window.dataLayer || [];
+
+            for (var key in cookieType) {
+                var value = cookieType[key];
+                console.log('window.dataLayer.push: ' + key + ' ' + !!getCmpSettingType(key));
+                window.dataLayer.push({
+                    event: key + "Consent",
+                    token: permutiveToken,
+                    opt_in: !!getCmpSettingType(key)
+                })
+            }
+        }
+        /* funziona ripresa dalla cookie policy standard */
+        function URL_add_parameter(url, param, value) {
+            var hash = {};
+            var parser = document.createElement('a');
+            parser.href = url;
+            var parameters = parser.search.split(/\?|&/);
+            for (var i = 0; i < parameters.length; i++) {
+                if (!parameters[i])
+                    continue;
+                var ary = parameters[i].split('=');
+                hash[ary[0]] = ary[1];
+            }
+            hash[param] = value;
+            var list = [];
+            Object.keys(hash).forEach(function(key) {
+                list.push(key + '=' + hash[key]);
+            });
+            parser.search = '?' + list.join('&');
+            return parser.href;
+        }
+        var cookieEnabled = true;
+        try {
+            cookieEnabled = (navigator.cookieEnabled) ? true : false;
+            if (typeof navigator.cookieEnabled == "undefined") {
+                document.cookie = "testcookie";
+                cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+                document.cookie = 'cookietest=; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+            }
+        } catch (e) {
+            cookieEnabled = true;
+        }
+
+        function OptanonWrapper() {
+            numberOfCallOptanWrapper++;
+            cmpEnabled = true;
+            console.log("OptanonWrapper: " + numberOfCallOptanWrapper);
+            oneTrustLoaded = true;
+
+            if (numberOfCallOptanWrapper >= 2) {
+                if (cookieEnabled === true) {
+                    location.href = URL_add_parameter(location.href, 'refresh_ce', '');
+                }
+            } else {
+                console.log("OptanonWrapper call init()");
+                init();
+            }
+        }
+    </script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -186,6 +340,12 @@
             <span style="font-weight: bold;">Data Scientists:</span> Giuseppe Iovino, Nicolò Marana<br>
             <span style="font-weight: bold;">Data Visualization Designers:</span> Annalaura Cannavò, Alessia Musio
         </div>
+    </div>
+
+    <div class="optanon-show-settings-container">
+        <!-- Tasto inizio impostazioni cookies OneTrust -->
+        <a class="optanon-show-settings">Impostazioni dei cookie</a>
+        <!-- Tasto fine Impostazioni cookies OneTrust -->
     </div>
 
 
