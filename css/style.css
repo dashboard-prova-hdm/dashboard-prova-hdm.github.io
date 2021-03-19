@@ -322,6 +322,10 @@ body {
     display: inline-flex;
 }
 
+.optanon-show-settings-container {
+    cursor: pointer;
+}
+
 
 /*MOBILE*/
 
@@ -332,6 +336,7 @@ body {
     .corpo {
         font-size: 11px;
     }
+    h1,
     .titolo {
         font-size: 26px;
     }
@@ -386,5 +391,8 @@ body {
     }
     .logo-wired {
         width: 80px;
+    }
+    .optanon-show-settings-container {
+        margin-top: 16px;
     }
 }
