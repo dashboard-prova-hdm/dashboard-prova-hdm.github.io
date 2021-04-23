@@ -269,13 +269,9 @@
                 <div class="sottotitolo">• SELEZIONA L'ARGOMENTO CHE VUOI APPROFONDIRE:</div>
                 <br>
 
-                <a class="bottone-on corpo bold" href="./index.html">
+                <a class="bottone-off corpo bold" href="./index.html">
                         Quanti vaccini vengono fatti al giorno?
                     </a>
-                <div class="descrizione corpo">
-                    Ecco quante dosi di vaccino sono state fatte in Italia quotidianamente: potete vedere il numero totale di somministrazioni e notare la ripartizione per prima e seconda dose. Inoltre potete seguire l'andamento medio giornaliero del numero di dosi e richiami
-                    per ogni settimana. <br><br><span style="color:#B4B4B4; font-family: 'Georgia', 'Times', serif; font-size: 20px; font-weight: bold;">*</span> Stima del tempo necessario per raggiungere la copertura vaccinale del
-                    70% della popolazione italiana, se vaccinassimo con lo stesso ritmo degli ultimi 7 giorni.</div>
 
                 <a class="bottone-off corpo bold" href="./categorie-vaccinate.html">
                         Quali categorie di persone sono già state vaccinate?
@@ -289,24 +285,26 @@
                         Quali sono i fornitori di vaccini?
                     </a>
 
-                <a class="bottone-off corpo bold" href="./covid.html">
-                        Quali sono gli effetti della campagna vaccinale?
-                        </a>
+                <a class="bottone-on corpo bold" href="./covid.html">
+                    Quali sono gli effetti della campagna vaccinale?
+                    </a>
+                <div class="descrizione corpo">
+                    I grafici mostrano i dati relativi al contagio da Covid-19 in relazione alle somministrazioni delle dosi di vaccino. Lo scopo è quello di monitorare efficacia dell’avanzamento delle vaccinazioni in relazione al numero di contagi, ospedalizzazioni e decessi.</div>
 
                 <div class="legenda">
                     <div class="sottotitolo">• LEGENDA:</div>
-                    <div class="corpo"></div>Il colore indica la somministazione della
-                    <span style="color:#FFFDF5; background-color:#F8A984; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">PRIMA</span> e della
-                    <span style="color:#FFFDF5; background-color:#8B9BBF; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">SECONDA</span> dose di vaccino. La linea &nbsp;<img class="rombi" src="./assets/rombi.svg">&nbsp;
-                    indica invece il dato cumulato del totale delle dosi somministrate
+                    <div class="corpo"></div>Il colore indica i dati relativi al contagio da
+                    <span style="color:#FFFDF5; background-color:#B50A3A; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">COVID-19</span> e alle somministrazioni di
+                    <span style="color:#FFFDF5; background-color:#A4A4A4; font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">VACCINO</span>. Il gradiente indica il <span style="color:#FFFDF5; background-color:#CCCCCC; background-image: linear-gradient(to right, #8EC432 , #B2CE82, #ECA896 , #FF6F46); font-size: 10px; letter-spacing: 1.5px; font-weight: bolder; padding:2px 4px;">TASSO DI OCCUPAZIONE</span>                    delle terapie intensive.
                 </div>
             </div>
         </div>
 
         <div class="col- dashboard">
-            <div class='tableauPlaceholder' id='viz1615568008533' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16155676329510&#47;DosiGiornaliere&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Vaccini_16155676329510&#47;DosiGiornaliere' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16155676329510&#47;DosiGiornaliere&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it' /></object></div>
+
+            <div class='tableauPlaceholder' id='viz1619187028148' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16155676329510&#47;Covid&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Vaccini_16155676329510&#47;Covid' /><param name='tabs' value='no' /><param name='toolbar' value='no' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Va&#47;Vaccini_16155676329510&#47;Covid&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='it' /><param name='filter' value='publish=yes' /></object></div>
             <script type='text/javascript'>
-                var divElement = document.getElementById('viz1615568008533');
+                var divElement = document.getElementById('viz1619187028148');
                 var vizElement = divElement.getElementsByTagName('object')[0];
                 if (divElement.offsetWidth > 1000) {
                     vizElement.style.width = '100%';
@@ -322,6 +320,7 @@
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                 vizElement.parentNode.insertBefore(scriptElement, vizElement);
             </script>
+
 
         </div>
     </div>
